@@ -15,7 +15,7 @@ exports.handler = async function (event, context, callback) {
     .collection(collection)
 
     try {
-      const res = await posts.find()
+      const res = await posts.find({})
         return {
           statusCode: 200,
           body: JSON.stringify(res)
